@@ -1,6 +1,6 @@
-##What can a cook in Italy teach a mechanic in India? Action Recognition Generalisation Over Scenarios and Locations
+What can a cook in Italy teach a mechanic in India? Action Recognition Generalisation Over Scenarios and Locations
 
-#This is the official implementation for the paper "What can a cook in Italy teach a mechanic in India? Action Recognition Generalisation Over Scenarios and Locations" 
+This is the official implementation for the paper "What can a cook in Italy teach a mechanic in India? Action Recognition Generalisation Over Scenarios and Locations" 
 
-##Dataset: ARGO1M
+Dataset: ARGO1M
 
