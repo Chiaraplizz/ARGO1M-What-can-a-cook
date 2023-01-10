@@ -13,14 +13,14 @@ If you use this repository, please cite:
   booktitle={Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing},
   pages={781--786},
   year={2015}}</code>
+## Requirements
+Set-up environment etc. 
 
 ## Dataset: ARGO1M
 
+### CSV 
+
 We provide both the <a href="http://en.wikipedia.org/wiki/Main_Page">CSV</a> files with the corresponding splits, which are <a href="http://en.wikipedia.org/wiki/Main_Page">training.csv</a>, <a href="http://en.wikipedia.org/wiki/Main_Page">seen.csv</a>,  <a href="http://en.wikipedia.org/wiki/Main_Page">japanese_cooking.csv</a>, <a href="http://en.wikipedia.org/wiki/Main_Page">rwanda.csv</a>, <a href="http://en.wikipedia.org/wiki/Main_Page">mechanic.csv</a>, <a href="http://en.wikipedia.org/wiki/Main_Page">sport.csv</a>. <a href="http://en.wikipedia.org/wiki/Main_Page">knitting.csv</a>, <a href="http://en.wikipedia.org/wiki/Main_Page">mechanic_colombia.csv</a>, <a href="http://en.wikipedia.org/wiki/Main_Page">sport_colombia.csv</a>. 
-'video_source', 'device', 'scenario', 'clean_scenario', 'label',
-       'narration', 'action_start_feature_idx', 'action_end_feature_idx',
-       'source_idx', 'scenario_idx', 'scenario_idx_multi', 'verb', 'noun',
-       'timestamp', 'timeframe', 'label_idx', 'device_idx']
 
 Those contain the following entries: 
 
@@ -31,5 +31,13 @@ Those contain the following entries:
 - <code>timestamp</code>: starting timestamp;
 - <code>timeframe</code>: starting timeframe;
 - <code>narration</code>: narration; 
-- <code>start_feature_idx</code>: starting feature index;
-- <code>end_feature_idx</code>: endinf feature index.
+- <code>start_feature_idx</code>: starting feature index for SlowFast pre-extracted features;
+- <code>end_feature_idx</code>: endinf feature index for SlowFast pre-extracted features.
+
+### FFCV 
+
+We provide the <a href="https://ffcv.io/">FFCV</a> encoding for each split, which are <a href="http://en.wikipedia.org/wiki/Main_Page">training.beton</a>, <a href="http://en.wikipedia.org/wiki/Main_Page">seen.beton</a>,  <a href="http://en.wikipedia.org/wiki/Main_Page">japanese_cooking.beton</a>, <a href="http://en.wikipedia.org/wiki/Main_Page">rwanda.beton</a>, <a href="http://en.wikipedia.org/wiki/Main_Page">mechanic.beton</a>, <a href="http://en.wikipedia.org/wiki/Main_Page">sport.beton</a>. <a href="http://en.wikipedia.org/wiki/Main_Page">knitting.beton</a>, <a href="http://en.wikipedia.org/wiki/Main_Page">mechanic_colombia.beton</a>, <a href="http://en.wikipedia.org/wiki/Main_Page">sport_colombia.beton</a>. 
+
+We also provide the scripts for extracting them using the given <a href="http://en.wikipedia.org/wiki/Main_Page">CSV</a> files.
+
+### Steps for training
