@@ -2,6 +2,7 @@
 ## What can a cook in Italy teach a mechanic in India? Action Recognition Generalisation Over Scenarios and Locations
 
 This is the official implementation for the paper "What can a cook in Italy teach a mechanic in India? Action Recognition Generalisation Over Scenarios and Locations" 
+
 ![teaser](Schermata 2023-01-11 alle 11.16.02.png)
 
 ## BibTeX
