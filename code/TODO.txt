@@ -1,0 +1,4 @@
+1. Experiment with ffcv ToDevice in pipeline
+2. Baseline models
+
+Higher order stats for BODA

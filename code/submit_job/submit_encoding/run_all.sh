@@ -1,0 +1,9 @@
+sbatch sub3_before0_building.sh
+sbatch sub3_before0_cleaning.sh
+sbatch sub3_before0_cooking.sh
+sbatch sub3_before0_crafting.sh
+sbatch sub3_before0_gardening.sh
+sbatch sub3_before0_mechanic.sh
+sbatch sub3_before0_playing.sh
+sbatch sub3_before0_shop.sh
+sbatch sub3_before0_sport.sh

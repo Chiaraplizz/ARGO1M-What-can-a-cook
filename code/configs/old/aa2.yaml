@@ -1,0 +1,89 @@
+use_ffcv:
+  desc: set to True to use ffcv compressed datasets
+  value: False
+
+ffcv_path:
+  desc: ffcv base directory
+  value: /user/work/tp8961/ego4d/ffcv
+ffcv_train:
+  desc: ffcv train file name. All the same for now until we have separate csvs.
+  value: aa2.beton
+ffcv_val:
+  value: aa2_2.beton
+ffcv_test:
+  value: aa2_3.beton
+ffcv_order:
+  desc: Order used for training. Evaluation is always sequential. RANDOM, QUASI_RANDOM or SEQUENTIAL.
+  value: QUASI_RANDOM
+ffcv_os_cache:
+  value: False
+
+csv_path:
+  desc: Action annotation csv
+  value: /user/work/tp8961/ego4d/data_csvs
+csv_train:
+  desc: train file name using csvs. All the same for now until we have separate csvs.
+  value: all_actions2.csv
+csv_val:
+  value: all_actions2.csv
+csv_test:
+  value: all_actions2.csv
+csv_shuffle:
+  value: True
+csv_len:
+  desc: only load n samples (useful for debugging). Set to -1 to ignore and use the full dataset.
+  value: -1
+
+feat_path:
+  desc: Path to flattened features
+  value: /user/work/tp8961/ego4d/slowfast_feats_flat
+
+sample_mode:
+  desc: How to sample features for a given action. E.g. start takes the first feature.
+  value: start
+
+seq_len:
+  desc: Sequence length of loaded feature. Set to 1 for a single clip.
+  value: 1
+
+labels:
+  desc: Labels returned by the dataloader. Should include action label first, followed by domain labels.
+  value: ['label_idx', 'source_idx', 'scenario_idx']
+
+model:
+  desc: The model to use. Names as in model.py
+  value: LinearClassifier
+
+loss:
+  value: CE
+
+batch_size:
+  value: 64
+
+optimizer:
+  value: Adam
+
+sch_milestones:
+  value: [70,90]
+
+sch_gamma:
+  value: 0.1
+
+lr:
+  value: 0.001
+
+epochs:
+  value: 100
+
+n_gpu:
+  value: 1
+
+feat_dim:
+  value: 2304
+
+n_classes:
+  value: 24
+
+n_workers:
+  desc: Number of dataloader workers.
+  value: 16

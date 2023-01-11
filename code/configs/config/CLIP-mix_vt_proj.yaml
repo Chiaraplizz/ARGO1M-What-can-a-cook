@@ -1,0 +1,323 @@
+use_ffcv:
+  desc: set to True to use ffcv compressed datasets
+  value: True
+
+dataset_splits:
+  value: [ "train", "val", "test_sport", "test_cooking_tokyo", "test_knit" ]
+dataset_csvs:
+  value: [ "training.csv", "validation.csv", "test_sport.csv", "test_cooking_tokyo.csv", "test_knit.csv" ]
+dataset_ffcvs:
+  value: [ "train.beton", "val.beton", "test_sport.beton", "test_cooking_tokyo.beton", "test_knit.beton" ]
+
+ffcv_pre_shuffle:
+  desc: shuffle dataset before encoding
+  value: True
+ffcv_path:
+  desc: ffcv base directory
+  value: /user/work/qh22492/ego4d/ffcv_slowfast-uid/sub3_bef0/ #/user/work/qh22492/ego4d/ffcv_text/sub3_bef0/
+ffcv_order:
+  desc: Order used for training. Evaluation is always sequential. RANDOM, QUASI_RANDOM or SEQUENTIAL.
+  value: QUASI_RANDOM
+ffcv_os_cache:
+  desc: Set to true if whole dataset fits in memory (and use RANDOM).
+  value: False
+ffcv_batches_ahead:
+  value: 3
+
+csv_path:
+  desc: Action annotation csv
+  value: /user/work/qh22492/e4d/csv_files
+csv_shuffle:
+  desc: shuffle the dataloader for csv files
+  value: True
+csv_len:
+  desc: only load n samples (useful for debugging). Set to -1 to ignore and use the full dataset.
+  value: -1
+base_path:
+  desc: path where to save runs
+  value: /user/work/qh22492/
+
+use_text:
+  desc: whether to use text features or not
+  value: True
+use_prompt:
+  desc: whether to use prompts or not
+  value: False
+use_domain_prompt:
+  desc: whether to use prompts or not
+  value: False
+prompt:
+  desc: prompt to use
+  value: [ 'scenario' ]
+print_test_caption:
+  desc: whether to print captions on test data
+  value: False
+use_CLIP:
+  desc: whether to use text features or not
+  value: True
+clip_dim:
+  desc: dimensionality of the features for CLIP
+  value: 512
+text_model:
+  desc: type of text model used
+  value: 'clip-ViT-B-32-multilingual-v1'
+generative:
+  desc: whether to use generative approach to construct captions
+  value: True
+gen_attn:
+  desc: type of attention for generating caption
+  value: 'other'
+alternate:
+  desc: alternate 'other scenarios' and 'other sources'
+  value: False
+gen_model:
+  desc: type of attention for generating caption
+  value: 't5-small'
+lr_gen:
+  desc: lr for generating captions
+  value: 0
+lr_clip:
+  desc: lr for CLIP
+  value: 0.0001
+mix_txt:
+  desc: mixing text feat for CLIP
+  value: False
+mix_video:
+  desc: mixing video feat for CLIP
+  value: True
+sim_1:
+  desc: query
+  value: 'v'
+sim_2:
+  desc: key
+  value: 't'
+use_clip_proj:
+  desc: use a projector for CLIP_mix
+  value: True
+ori:
+  desc: keeping original clip in the loss
+  value: False
+curriculum_learning:
+  desc: curriculum learning
+  value: False
+stage:
+  desc: curriculum learning stage
+  value: [ {'self': 0} , {'other': 10}]
+clip_attn:
+  desc: type of attention for building the CLIP support set, choose between "softmax" and "trx"
+  value: 'trx'
+drop_connect:
+  desc: dropout on attention matrix
+  value: False
+use_trx:
+  desc: whether to use trx query features for classification
+  value: False
+one_proj:
+  desc: use one projector for text or two
+  value: True
+feat_path:
+  desc: Path to flattened features
+  value: /user/work/qh22492/slowfast8x8_r101_k400
+bottleneck_dim:
+  desc: bottleneck dimension for the trx
+  value: 128
+t2t:
+  desc: text2text attention
+  value: False
+v2t:
+  desc: text2video attention
+  value: True
+sample_mode:
+  desc: How to sample features for a given action. E.g. start takes the first feature.
+  value: customized
+
+n_action_subsample:
+  desc: Sequence length of loaded features inside the segment narration.
+  value: 3
+
+n_before_after_context:
+  desc: Sequence length of loaded features before/after.
+  value: 0
+stride_1:
+  value: False
+resume:
+  value: False
+resume_date:
+  value: None
+save_matrices:
+  value: False
+save_model:
+  value: False
+labels:
+  desc: Labels returned by the dataloader. Should include action label first, followed by domain labels.
+  value: [ 'label_idx', 'scenario_idx', 'source_idx' ]
+store_dir:
+  desc: Directory where to store the model
+  value:  '/user/work/qh22492/saved_matrices/'
+model:
+  desc: The model to use. Names as in model.py
+  value: 'MLP'
+model_prediction:
+  desc: The model to use. Names as in model.py
+  value: 'Classifier.logits'
+model_types:
+  desc: The model to use. Names as in model.py
+  value: [ 'TextModel', 'MLP', 'Classifier', 'CLIP' ]
+model_names:
+  desc: The model to use. Names as in model.py
+  value: [ 'TextModel', 'MLP', 'Classifier', 'CLIP' ]
+model_lrs:
+  desc: Learning rate for the models
+  value: [ 0.0001, 0.0001, 0.0001, 0.0001 ]
+step:
+  desc: Learning rate for the models
+  value: [True, True, True, False]
+model_inputs:
+  desc: The model inputs
+  value: [ { "text": "data.text" }, { "x": "data.rgb_feat" }, { "x": "MLP.representations" }, { "video_features": "MLP.representations", "text_features": "TextModel.text_feat", "target": "data.target" , "attn": 'attn'} ]
+freeze_models:
+  desc: Flag for freezing models
+  value: [ False, False, False, False ]
+model_use_train:
+  desc: The model prediction
+  value: [ True, True, True, True ]
+model_use_eval:
+  desc: The model prediction
+  value: [ True, True, True, True ]
+dc_dim:
+  desc: Dimensions of hidden layers in Domain Classifier.
+  value: 100
+grl_domain:
+  desc: It could be either "scenario" or "source" based on which distance we want to minimize.
+  value: "scenario"
+grl_level:
+  desc: It could be either "scenario" or "source" based on which distance we want to minimize.
+  value: -1
+
+start_grl:
+  desc: when activating GRL
+  value: 0
+mlp_hidden_dims:
+  desc: Dimensions of hidden layers in mlp. Needs at least one dimension.
+  value: [ 4096, 512 ]
+mlp_dropout:
+  desc: dropout prob for use in mlp hidden layers
+  value: 0.5
+reduce_dim:
+  desc: reducing feature dim before concatenating
+  value: False
+reduced_dim:
+  desc: dim of the reduced feature vector
+  value: 512
+prompt_dim:
+  desc: dim of the reduced feature vector
+  value: 64
+
+trn_scales:
+  desc: number of different scales for TRN-multiscale
+  value: 3
+
+trn_bottleneck:
+  desc: TRN bottleneck dimension
+  value: 256
+trn_classifier:
+  desc: number of different scales for TRN-multiscale
+  value: True
+
+loss_names:
+  desc: Loss function to use from losses.py
+  value: [ "CE", "CLIP" ]
+loss_types:
+  desc: Loss function to use from losses.py
+  value: [ "CE",  "CLIP" ]
+loss_inputs:
+  desc: Loss function inputs to feed to the loss
+  value: [ { 'output': 'Classifier.logits', 'target': 'data.target' }, { 'output': 'CLIP.representations', 'target': 'data.target' } ]
+
+prompt_loss_weight:
+  desc: weight for the prompt loss
+  value: 0.01
+adapt_loss_weight:
+  desc: weight for the adaptive loss
+  value: 0.01
+cls_loss_weight:
+  desc: weight for the classifier loss
+  value: 0.01
+clip_prompt:
+  desc: use prompt for clip loss
+  value: False
+loss_weights:
+  desc: Weightings applied to losses when summing them
+  value: [ 1.0, 1.0, 1.0, 1.0 ]
+LA_tau:
+  value: 1.0
+weight_decay:
+  value: 0.0001
+
+boda_upsilon:
+  desc: power of the BODA calibrated distance
+  value: 1.0
+boda_dist:
+  desc: distance function between samples
+  value: mean
+boda_balance_domain:
+  desc: Set to true for Eq. 3 and Eq. 4
+  value: True
+boda_calibrate_distance:
+  desc: Set to true for Eq. 4
+  value: True
+boda_dists:
+  desc: choose from mean or mahalanobis. Mahalanobis will probably NAN, as the representation dimension > n samples for some class/domain sets.
+  value: mean
+boda_level:
+  desc: Level of feat we want to apply BODA to.
+  value: -1
+
+update_stat_fraction:
+  desc: fraction of training dataset used to update stats each epoch
+  value: 0.1
+update_stat_alpha:
+  desc: momentum used in running update of distribution statistics. refers to weight of previous epoch.
+  value: 0.5
+stat_update_start_epoch:
+  desc: epoch to start tracking distribution stats
+  value: 100
+dist_stats:
+  desc: distribution statistics for bode loss.
+  # value: ["c_d_means", "c_d_vars", "c_d_covs"]
+  value: [ "c_d_means" ]
+
+batch_size:
+  value: 128
+
+optimizer:
+  value: Adam
+
+sch_milestones:
+  value: [ 30,40 ]
+
+sch_gamma:
+  value: 0.1
+
+lr:
+  value: 0.0001
+
+epochs:
+  value: 50
+
+n_gpu:
+  value: 1
+
+feat_dim:
+  value: 2304
+
+n_classes:
+  value: 60
+
+n_domains:
+  value: 10
+
+n_workers:
+  desc: Number of dataloader workers.
+  value: 2
+
