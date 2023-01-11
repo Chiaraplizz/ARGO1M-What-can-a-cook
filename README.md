@@ -20,7 +20,7 @@ Set-up environment etc.
 
 ### CSV 
 
-We provide both the <a href="http://en.wikipedia.org/wiki/Main_Page">CSV</a> files with the corresponding splits, which are <a href="http://en.wikipedia.org/wiki/Main_Page">training.csv</a>, <a href="http://en.wikipedia.org/wiki/Main_Page">seen.csv</a>,  <a href="http://en.wikipedia.org/wiki/Main_Page">japanese_cooking.csv</a>, <a href="http://en.wikipedia.org/wiki/Main_Page">rwanda.csv</a>, <a href="http://en.wikipedia.org/wiki/Main_Page">mechanic.csv</a>, <a href="http://en.wikipedia.org/wiki/Main_Page">sport.csv</a>. <a href="http://en.wikipedia.org/wiki/Main_Page">knitting.csv</a>, <a href="http://en.wikipedia.org/wiki/Main_Page">mechanic_colombia.csv</a>, <a href="http://en.wikipedia.org/wiki/Main_Page">sport_colombia.csv</a>. 
+We provide both the <a href="http://en.wikipedia.org/wiki/Main_Page">CSV</a> files with the corresponding splits, which are <a href="http://en.wikipedia.org/wiki/Main_Page">training.csv</a>, <a href="http://en.wikipedia.org/wiki/Main_Page">seen.csv</a>,  <a href="http://en.wikipedia.org/wiki/Main_Page">japanese_cooking.csv</a>, <a href="http://en.wikipedia.org/wiki/Main_Page">rwanda.csv</a>, <a href="http://en.wikipedia.org/wiki/Main_Page">mechanic.csv</a>, <a href="http://en.wikipedia.org/wiki/Main_Page">sport.csv</a>, <a href="http://en.wikipedia.org/wiki/Main_Page">knitting.csv</a>, <a href="http://en.wikipedia.org/wiki/Main_Page">mechanic_colombia.csv</a>, <a href="http://en.wikipedia.org/wiki/Main_Page">sport_colombia.csv</a>. 
 
 Those contain the following entries: 
 
