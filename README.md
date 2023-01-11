@@ -43,6 +43,8 @@ Those contain the following entries:
 We provide the <a href="https://ffcv.io/">FFCV</a> encoding for each split, which are <a href="http://en.wikipedia.org/wiki/Main_Page">training.beton</a>, <a href="http://en.wikipedia.org/wiki/Main_Page">seen.beton</a>,  <a href="http://en.wikipedia.org/wiki/Main_Page">japanese_cooking.beton</a>, <a href="http://en.wikipedia.org/wiki/Main_Page">rwanda.beton</a>, <a href="http://en.wikipedia.org/wiki/Main_Page">mechanic.beton</a>, <a href="http://en.wikipedia.org/wiki/Main_Page">sport.beton</a>, <a href="http://en.wikipedia.org/wiki/Main_Page">knitting.beton</a>, <a href="http://en.wikipedia.org/wiki/Main_Page">mechanic_colombia.beton</a>, <a href="http://en.wikipedia.org/wiki/Main_Page">sport_colombia.beton</a>. 
 Those can be found at <a href="https://www.dropbox.com/sh/hsf8assfb9pzjos/AABqlWHx3YQATJZ_Gqnnhsj1a?dl=0">download_ffcv</a>.
 
-We also provide the scripts for extracting them using the given <a href="http://en.wikipedia.org/wiki/Main_Page">CSV</a> files.
+We also provide the scripts for extracting them using the given <a href="http://en.wikipedia.org/wiki/Main_Page">CSV</a> files. You can extract FFCVs by running: 
+
+<code>python /scripts/dataset_ffcv_encode.py --config /configs/encode_ffcv.yaml --split train</code>
 
 ### Steps for training
