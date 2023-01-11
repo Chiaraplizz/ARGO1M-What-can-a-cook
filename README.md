@@ -41,7 +41,8 @@ Those contain the following entries:
 ### FFCV 
 
 We provide the <a href="https://ffcv.io/">FFCV</a> encoding for each split, which are <a href="http://en.wikipedia.org/wiki/Main_Page">training.beton</a>, <a href="http://en.wikipedia.org/wiki/Main_Page">seen.beton</a>,  <a href="http://en.wikipedia.org/wiki/Main_Page">japanese_cooking.beton</a>, <a href="http://en.wikipedia.org/wiki/Main_Page">rwanda.beton</a>, <a href="http://en.wikipedia.org/wiki/Main_Page">mechanic.beton</a>, <a href="http://en.wikipedia.org/wiki/Main_Page">sport.beton</a>, <a href="http://en.wikipedia.org/wiki/Main_Page">knitting.beton</a>, <a href="http://en.wikipedia.org/wiki/Main_Page">mechanic_colombia.beton</a>, <a href="http://en.wikipedia.org/wiki/Main_Page">sport_colombia.beton</a>. 
-Those can be found at <a href="https://www.dropbox.com/sh/hsf8assfb9pzjos/AABqlWHx3YQATJZ_Gqnnhsj1a?dl=0"></a>
+Those can be found at <a href="https://www.dropbox.com/sh/hsf8assfb9pzjos/AABqlWHx3YQATJZ_Gqnnhsj1a?dl=0">download_ffcv</a>
+
 We also provide the scripts for extracting them using the given <a href="http://en.wikipedia.org/wiki/Main_Page">CSV</a> files.
 
 ### Steps for training
