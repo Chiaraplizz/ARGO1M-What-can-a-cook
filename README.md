@@ -50,3 +50,9 @@ We also provide the scripts for extracting them using the given <a href="http://
 <code>python /scripts/dataset_ffcv_encode.py --config /configs/encode_ffcv.yaml --split train</code>
 
 ### Steps for training
+
+The folder <code>scripts</code> contains code and bash scripts to reproduce the paper results. To re-create CIR results:
+
+1. Modify <code>config</code> internal paths to match the location of FFCV data.
+
+2. Run the <code>sh /scripts/submit_cir.sh</code> to train CIR.
