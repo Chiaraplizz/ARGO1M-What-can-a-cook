@@ -3,7 +3,7 @@
 
 This is the official implementation for the paper "What can a cook in Italy teach a mechanic in India? Action Recognition Generalisation Over Scenarios and Locations" 
 
-![teaser](teaser.png)
+<img src="teaser.png" width="200">
 
 ## BibTeX
 
