@@ -13,8 +13,12 @@ If you use this repository, please cite:
   booktitle={Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing},
   pages={781--786},
   year={2015}}</code>
+  
 ## Requirements
-Set-up environment etc. 
+We provide modified training scripts for CIR to replicate paper results. To install dependencies:
+
+<code>conda env create -f environment.yml</code> 
+
 
 ## Dataset: ARGO1M
 
