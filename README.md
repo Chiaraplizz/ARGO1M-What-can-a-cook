@@ -25,9 +25,9 @@ We provide both the <a href="http://en.wikipedia.org/wiki/Main_Page">CSV</a> fil
 Those contain the following entries: 
 
 - <code>uid</code>: uid of the video clip; 
-- <code>scenario_idx</code>: scenario label;
-- <code>location_idx</code>: location label; 
-- <code>label</code>: action label;
+- <code>scenario_idx</code>: scenario label (index-scenario association in <a href="http://en.wikipedia.org/wiki/Main_Page">scenario_index.txt</a>);
+- <code>location_idx</code>: location label (index-location association in <a href="http://en.wikipedia.org/wiki/Main_Page">location_index.txt</a>); 
+- <code>label</code>: action label (index-action association in <a href="http://en.wikipedia.org/wiki/Main_Page">location_index.txt</a>);
 - <code>timestamp</code>: starting timestamp;
 - <code>timeframe</code>: starting timeframe;
 - <code>narration</code>: narration; 
