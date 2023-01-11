@@ -55,4 +55,4 @@ The folder <code>scripts</code> contains code and bash scripts to reproduce the 
 
 1. Modify <code>config</code> internal paths to match the location of FFCV data.
 
-2. Run the <code>sh /scripts/submit_cir.sh</code> to train CIR.
+2. Run <code>sh /scripts/submit_cir.sh</code> to train CIR.
