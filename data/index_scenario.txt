@@ -1,0 +1,10 @@
+'Sport': 0,
+'Arts and craft': 1,
+'Playing': 2,
+'Cooking': 3,
+'Gardening': 4,
+'Mechanic': 5,
+'Cleaning': 6,
+'Building': 7,
+'Shopping': 8, 
+'Knitting': 9

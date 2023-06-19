@@ -1,0 +1,13 @@
+'Pittsburgh': 0,
+ 'India': 1,
+ 'Bristol': 2,
+ 'Singapore': 3,
+ 'Catania': 4,
+ 'Georgia': 5,
+ 'Africa': 6,
+ 'Saudi Arabia': 7,
+ 'Facebook': 8,
+ 'Indiana': 9,
+ 'Tokyo': 10,
+ 'Minnesota': 11,
+ 'Colombia': 12
