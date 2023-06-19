@@ -64,7 +64,7 @@ To speed up training, we used <a href="https://ffcv.io/">FFCV</a> encodings of b
 
 We also provide the scripts for extracting them using the given <a href="s3://ego4d-bristol/public/ARGO1M/">CSV</a> files. After downloading Ego4D SlowFast features, you can extract FFCVs by running: 
 
-<code>python /scripts/dataset_ffcv_encode.py --config /configs/{config_file}.yaml --split train</code>
+<code>python /scripts/dataset_ffcv_encode.py --config /configs/{config_file}.yaml --split {split_name}</code>
 
 ### Code structure
 
