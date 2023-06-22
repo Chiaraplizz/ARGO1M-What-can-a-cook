@@ -28,7 +28,6 @@ We provide modified training scripts for CIR to replicate paper results. To inst
 Our annotated clips making up ARGO1M, are curated from videos of the large-scale Ego4D dataset. Before using ARGO1M, you thus need to sign the EGO4D License Agreement. Here are the three steps to follow for downloading the dataset:
 
 1. Go to [ego4ddataset.com](https://ego4d-data.org/docs/start-here/#download-data) to review and execute the EGO4D License Agreement, and you will be emailed a set of AWS access credentials when your license agreement is approved, which will take 48hrs.
-   - :warning: <span style="color:red"> **As we are currently uploading the dataset on AWS servers, please send an e-mail to <code>chiara.plizzari@polito.it</code> once you get the license (step 1), so that we can check that and send you the files.** </span> :warning:
 
 2.  The datasets are hosted on Amazon S3 and require credentials to access. AWS CLI uses the credentials stored in the home directory file: <code>~/.aws/credentials</code>. If you already have credentials configured then you can skip this step. If not, then:
   - Install the AWS CLI from: [AWS CLI](https://aws.amazon.com/cli/)
@@ -37,7 +36,7 @@ Our annotated clips making up ARGO1M, are curated from videos of the large-scale
 
   The CLI requires python >= 3.8. Please install the prerequisites via <code>python setup.py install</code> (easyinstall) at the repo root, or via <code>pip install -r requirements.txt</code>. 
   
-3. Download the dataset using the following command: <code>aws s3 cp s3://ego4d-bristol/public/ARGO1M/ /directory/to/save/the/data --recursive</code>
+3. Download the dataset using the following command: <code>python code/scripts/download_all.py --flag DEST_DIR</code>, where <code>flag</code> is either <code>ffcv</code> or <code>csv</code>.
 
 
 You can directly download our FFCV encodings for all ARGO1M splits as well as the CSV files described below.
