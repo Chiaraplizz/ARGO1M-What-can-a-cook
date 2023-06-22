@@ -10,12 +10,12 @@ import numpy as np
 import torch
 import sys
 
-sys.path.append("/user/work/qh22492/e4d/")
+sys.path.append("/")
 print(sys.path)
 from feature_dataset import classification_dataset
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--config", "-c", default="/user/home/qh22492/e4d/configs/middle.yaml", help="wandb config file.")
+parser.add_argument("--config", "-c", default="/default.yaml", help="wandb config file.")
 parser.add_argument("--split", type=str, help='Specify split to encode from the config file.')
 args = parser.parse_args()
 
