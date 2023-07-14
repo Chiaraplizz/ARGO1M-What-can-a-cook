@@ -12,7 +12,7 @@ If you use the ARGO1M dataset and/or our CIR method code, please cite:
 <code>@inproceedings{Plizzari2023,
   title={What can a cook in Italy teach a mechanic in India? Action Recognition Generalisation Over Scenarios and Locations},
   author={Plizzari, Chiara and Perrett, Toby and Caputo, Barbara and Damen, Dima},
-  booktitle={preprint},
+  booktitle={ICCV2023},
   year={2023}}</code>
   
 ## Requirements
